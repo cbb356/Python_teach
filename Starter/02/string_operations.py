@@ -15,4 +15,3 @@ print('See on strings: {} and {}'.format(string1, string2))
 x = 5.17
 print('Number is %d' % (x))
 print('Number is {:f}'.format(x))
-print('Number is {}'.format(x))
