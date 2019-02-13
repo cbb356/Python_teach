@@ -12,6 +12,6 @@ print(string1[2])
 print('See on strings: %s and %s' % (string1, string2))
 print('See on strings: {} and {}'.format(string1, string2))
 
-x = 5.18
+x = 5.19
 print('Number is %d' % (x))
 print('Number is {:f}'.format(x))
