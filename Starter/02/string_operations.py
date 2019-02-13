@@ -12,6 +12,12 @@ print(string1[2])
 print('See on strings: %s and %s' % (string1, string2))
 print('See on strings: {} and {}'.format(string1, string2))
 
+string3 = 'Number is:'
 x = 5.19
-print('Number is %d' % (x))
-print('Number is {:f}'.format(x))
+y = 4
+print('%s %d' % (string3, x))
+print('{} {:f}'.format(string3, x))
+print('{} {:5.1f}'.format(string3, x))
+print('{1} {1:5.1f}'.format(string3, x))
+print('{} {}'.format(x, y))
+print('{1} {0}'.format(x, y))
