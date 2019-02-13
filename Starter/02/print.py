@@ -8,4 +8,4 @@ print(1, end=' ')
 print(2, end='\n\n')
 
 print('hel', end="")
-print('lo')
+print('lo!')
