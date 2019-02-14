@@ -7,4 +7,4 @@ input()
 
 x = int(input('Input first integer number:'))
 y = int(input('Input second integer number:'))
-print('Sum is: {} + {} = {}'.format(x, y, x+y))
+print('The sum is: {} + {} = {}'.format(x, y, x+y))
