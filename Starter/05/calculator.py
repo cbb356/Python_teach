@@ -1,17 +1,32 @@
+def add (x, y):
+    return x + y
+
+
+def sub (x, y):
+    return x - y
+
+
+def mult (x, y):
+    return x * y
+
+
+def div (x, y):
+    if y == 0:
+        print('Incorrect operation (division by zero)')
+    else:
+        return x / y
+
+
 def calc(x, operator, y):
     result = None
     if operator == '+':
-        result = x + y
+        result = add(x, y)
     elif operator == '-':
-        result = x - y
+        result = sub(x, y)
     elif operator == '*':
-        result = x * y
-    elif operator == '/' and y == 0:
-        print('Incorrect operation(division by zero)')
+        result = mult(x, y)
     elif operator == '/':
-        result = x / y
-    elif operator == '^':
-        result = x ** y
+        result = div(x, y)
     else:
         print('Unsupported operation')
 
@@ -19,7 +34,7 @@ def calc(x, operator, y):
         print('Result:', result)
 
 
-def input_data():
+def input_output():
     x = input("Input first number or 'exit':")
     if x == "exit":
         return "exit"
@@ -31,16 +46,14 @@ def input_data():
         return "exit"
     return calc(float(x), operator, float(y))
 
-def exit():
-    print("Exit...")
     
 def main():
     while True:
-        if input_data() == "exit":
-            exit()
+        if input_output() == "exit":
             break
         else:
             print()
+
 
 if __name__ == "__main__":
     main()
