@@ -6,4 +6,4 @@ def count(footstep):
     else:
         return count(footstep - 2) + count(footstep - 1)
 
-print(count(7))
+print(count(10))
