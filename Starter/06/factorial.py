@@ -10,6 +10,5 @@ def recursive_factorial(n):
     else:
         return n * recursive_factorial(n - 1)
 
-
 print(nonrecursive_factorial(5))
 print(recursive_factorial(5))
