@@ -1,6 +1,6 @@
-def simple(min_limit, max_limit):
+def simple_list(limits):
     simple_numbers = []
-    for i in range(min_limit, max_limit+1):
+    for i in range(limits[0], limits[-1]+1):
         if simple_check(i):
             simple_numbers.append(i)
     return simple_numbers
@@ -11,13 +11,14 @@ def simple_check(number):
             return False
     return True
 
-def min_limit():
-    limit_min = int(input("From: "))
-    return limit_min
-
-def max_limit():
-    limit_max = int(input("To: "))
-    return limit_max
+def limits():
+    limits_temp = []
+    limits_out = []
+    for i in range(2):
+        limits_temp.append(int(input("Input number: ")))
+    limits_out.append(min(limits_temp))
+    limits_out.append(max(limits_temp))
+    return limits_out
 
 def mult_list(list1):
     mult_result = 1
@@ -35,6 +36,6 @@ def operation(result):
         print("Incorrect operation")
 
 
-result = simple(min_limit(), max_limit())
+result = simple_list(limits())
 print(result)
 operation(result)
