@@ -9,7 +9,9 @@ class Car:
         return self.number == other.number
 
 class Salon:
-    cars = [Car(1), Car(2), Car(2), Car(3), Car(3), Car(5), Car(3)]
+
+    def __init__(self):
+        self.cars = [Car(1), Car(2), Car(2), Car(3), Car(3), Car(5), Car(3)]
 
     def add_car(self, number):
         self.cars.append(Car(number))
