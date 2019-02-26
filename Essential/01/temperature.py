@@ -1,10 +1,10 @@
 class Temperature:
-    def __init__(self):
-        self._celsius = 0
-        self._farenheit = 0
+    def __init__(self, celsius=0):
+        self._celsius = celsius
+        self._fahrenheit = celsius * 9/5 + 32
 
     def __str__(self):
-        return "Temperature is {:.1f} C or {:.1f} F".format(self._celsius, self._farenheit)
+        return "Temperature is {:.1f} C or {:.1f} F".format(self._celsius, self._fahrenheit)
 
     @property
     def celsius(self):
@@ -13,27 +13,28 @@ class Temperature:
     @celsius.setter
     def celsius(self, value):
         self._celsius = value
-        self._farenheit = value * 9/5 + 32
+        self._fahrenheit = value * 9/5 + 32
 
     @property
-    def farenheit(self):
-        return "Temperature is {:.1f} F".format(self._farenheit)
+    def fahrenheit(self):
+        return "Temperature is {:.1f} F".format(self._fahrenheit)
 
-    @farenheit.setter
-    def farenheit(self, value):
+    @fahrenheit.setter
+    def fahrenheit(self, value):
         self._celsius = (value - 32) / (9/5)
-        self._farenheit = value
+        self._fahrenheit = value
 
 def main():
-
     t = Temperature()
+    print(t)
+    t = Temperature(15)
     print(t)
     t.celsius = 10
     print(t)
-    print(t.celsius, t.farenheit)
-    t.farenheit = 30
+    print(t.celsius, t.fahrenheit)
+    t.fahrenheit = 30
     print(t)
-    print(t.celsius, t.farenheit)
+    print(t.celsius, t.fahrenheit)
 
 if __name__ == "__main__":
     main()
