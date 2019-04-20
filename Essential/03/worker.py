@@ -11,7 +11,7 @@ class Worker:
 
     @staticmethod
     def read_worker():
-        first_name = input('Input first name1:')
+        first_name = input('Input first name:')
         last_name = input('Input last name:')
         department = input('Input name of department:')
         year = input('Input year when the worker bevgun to work:')
